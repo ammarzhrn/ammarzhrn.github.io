@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;700;900&display=swap"
+        rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -21,15 +26,7 @@
             width: 100vw;
             height: 10vh;
             display: flex;
-            justify-content: space-between;
-        }
-
-        .navbar_logo {
-            width: 34%;
-            height: 100%;
-            display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .navbar_btn {
@@ -80,15 +77,9 @@
             background: rgba(0, 0, 0, 0.223);
         }
 
-        .hero1_inside{
+        .hero1_inside {
             height: 100%;
             width: 100%;
-            display: flex;
-        }
-
-        .area_pp {
-            width: 45%;
-            height: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -106,15 +97,19 @@
         .area_title {
             width: 30%;
             height: 35.4%;
-            padding: 270px;
-            padding-top: 155px;
+            padding-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .tv_title {
             color: white;
             text-shadow: 0px 0px 10px #ffffff00;
-            font-family: 'AT Arges', sans-serif;
-            font-size: 200px;
+            font-family: 'Big Shoulders Display';
+            font-size: 150px;
+            font-weight: 800;
+            text-align: center;
             letter-spacing: 0px;
             word-spacing: 0px;
             transition: letter-spacing 0.3s ease, word-spacing 0.3s ease, text-shadow 0.4s ease;
@@ -129,10 +124,12 @@
         .tv_title_2 {
             color: white;
             -webkit-text-stroke: 2px rgba(255, 255, 255, 0);
-            margin-top: -50px;
+            margin-top: -40px;
             text-shadow: 0px 0px 10px #ffffff00;
-            font-family: 'AT Arges', sans-serif;
-            font-size: 93px;
+            font-family: 'Big Shoulders Display';
+            font-weight: 300;
+            text-align: center;
+            font-size: 120px;
             letter-spacing: 0px;
             word-spacing: 0px;
             transition: letter-spacing 0.3s ease, word-spacing 0.3s ease, text-shadow 0.4s ease, -webkit-text-stroke 0.3s ease, color 0.19s ease;
@@ -146,74 +143,22 @@
             text-shadow: 0px 0px 100px #ffffff;
         }
 
-        .tv_tagline {
+        .title_3 {
             color: white;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0);
+            margin-top: -15px;
+            text-shadow: 0px 0px 10px #ffffff00;
+            font-family: Helvetica;
+            font-style: italic;
+            font-weight: 100;
+            text-align: center;
+            font-size: 25px;
+            letter-spacing: 0px;
+            word-spacing: 0px;
+            transition: letter-spacing 0.3s ease, word-spacing 0.3s ease, text-shadow 0.4s ease, -webkit-text-stroke 0.3s ease, color 0.19s ease;
         }
 
-        .btn_portofolio {
-            font-weight: 600;
-            color: white;
-            box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
-            padding: 15px 30px;
-            margin-left: 20px;
-            font-size: 20px;
-            border: 1px solid;
-            margin-top: 25px;
-            background: rgba(255, 255, 255, 0);
-            transition: background 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn_portofolio:hover {
-            color: black;
-            background: white;
-            box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.371);
-        }
-
-        .btn_me {
-            font-weight: 600;
-            color: white;
-            box-shadow: 0px 0px 50px rgba(255, 255, 255, 0);
-            padding: 15px 25px;
-            font-size: 20px;
-            border: 1px solid;
-            background: black;
-            margin-top: 25px;
-            transition: background 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn_me:hover {
-            color: black;
-            background: white;
-            box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.371);
-        }
-
-        .tv_pp {
-            font-family: 'AT Arges';
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
-            font-size: 150px;
-            color: rgba(255, 255, 255, 0);
-            margin-top: -150px;
-            margin-left: 0px;
-            transition: color 0.3s ease, margin-left 0.3s ease, text-shadow 0.3s ease, -webkit-text-stroke 0.3s ease;
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
-        }
-
-        .tv_pp:hover {
-            -webkit-text-stroke: 3px white;
-            margin-left: 95px;
-            text-shadow: 0px 0px 30px #ffffff95;
-        }
-
-        .ppnya {
-            box-shadow: 0px 0px 500px rgba(255, 255, 255, 0);
-            transition: box-shadow 0.4s ease;
-        }
-
-        .ppnya:hover {
-            box-shadow: 0px 0px 500px rgba(255, 255, 255, 0.404);
-        }
-
-        .hero2 {
+        .hero3 {
             height: 103vh;
             width: 100%;
             padding-bottom: 40px;
@@ -222,12 +167,13 @@
 
         .tv_skills {
             color: black;
-            font-family: 'AT Arges';
+            font-family: 'Big Shoulders Display';
             font-size: 130px;
-            letter-spacing: 0px;
+            letter-spacing: -4px;
             transition: letter-spacing 0.2s ease;
             text-align: center;
             padding-top: 30px;
+            padding-bottom: 30px;
         }
 
         .tv_skills:hover {
@@ -239,6 +185,13 @@
             width: 100%;
             display: flex;
             justify-content: center;
+        }
+
+        .skills_div p{
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
         }
 
         .div_gd {
@@ -280,10 +233,13 @@
         }
 
         .persen_figma {
-            background: rgba(0, 0, 0, 0.564);
+            background: rgba(0, 0, 0, 0.761);
             height: 5%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: end;
         }
 
         .persen_figma:hover {
@@ -299,22 +255,14 @@
         }
 
         .persen_ai {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 33.6%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_ai:hover {
-            height: 33.6%;
             background: black;
-        }
-
-        .levels_dsgn {
-            height: 400px;
-            position: absolute;
-            left: 15px;
-            top: 1499px;
         }
 
         .levels_video {
@@ -345,14 +293,13 @@
         }
 
         .persen_pr {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 33.5%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_pr:hover {
-            height: 33.5%;
             background: black;
         }
 
@@ -364,14 +311,13 @@
         }
 
         .persen_ae {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 12%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_ae:hover {
-            height: 12%;
             background: black;
         }
 
@@ -405,14 +351,13 @@
         }
 
         .persen_html {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 30.5%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_html:hover {
-            height: 30.5%;
             background: black;
         }
 
@@ -424,14 +369,13 @@
         }
 
         .persen_css {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 30.5%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_css:hover {
-            height: 30.5%;
             background: black;
         }
 
@@ -443,29 +387,29 @@
         }
 
         .persen_kotlin {
-            background: rgba(0, 0, 0, 0.564);
-            height: 5%;
+            background: rgba(0, 0, 0, 0.761);
+            height: 31%;
             width: 80px;
             transition: height 0.3s ease, background 0.3s ease;
         }
 
         .persen_kotlin:hover {
-            height: 31%;
             background: black;
         }
 
-        .hero3 {
+        .hero4 {
             height: 100vh;
             width: 100%;
         }
 
         .title_project {
-            font-family: 'AT Arges';
-            font-size: 200px;
+            font-family: 'Big Shoulders Display';
+            font-size: 100px;
             text-align: center;
             padding-top: 30px;
+            padding-bottom: 5px;
             color: white;
-            letter-spacing: 0px;
+            letter-spacing: -5px;
             transition: letter-spacing 0.3s ease;
         }
 
@@ -474,12 +418,13 @@
         }
 
         .panel_project {
-            height: 100%;
+            height: 80%;
             width: 100%;
+            padding-left: 30px;
         }
 
         .div_project {
-            height: 40%;
+            height: 100%;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -499,13 +444,22 @@
         .project_name {
             display: flex;
             justify-content: center;
-            padding: 10px;
+            margin-top: -20px;
+            margin-right: 40px;
         }
 
         .tv_name_project {
-            font-family: 'AT Arges';
+            font-family: 'Big Shoulders Display';
             font-size: 50px;
-            color: white;
+            letter-spacing: -2px;
+            margin-top: 40px;
+            color: rgb(0, 0, 0);
+            transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, letter-spacing 0.3s ease;
+        }
+        .tv_name_project:hover {
+            color: rgba(0, 0, 0, 0);
+            -webkit-text-stroke: 2px black;
+            letter-spacing: 2px;
         }
 
         .img_project {
@@ -520,35 +474,293 @@
         .gradient {
             height: 30%;
             width: 100%;
-            background: linear-gradient(to bottom, #ffffff, rgb(79, 79, 79), #000000);
+            background: linear-gradient(to bottom, #ffffff, rgb(255, 255, 255), #000000);
         }
 
-        .container_sosmed{
+        .container_sosmed {
             height: 170px;
             width: 100%;
             display: flex;
             justify-content: center;
             margin-top: -140px;
         }
-        
-        .panel_logo_sosmed{
+
+        .panel_logo_sosmed {
             padding: 10px;
             opacity: 1;
             transition: opacity 0.3s ease;
         }
-        .panel_logo_sosmed:hover{
+
+        .panel_logo_sosmed:hover {
             opacity: 0.6;
         }
 
+        .hero2 {
+            height: 103vh;
+            width: 100%;
+            padding-bottom: 40px;
+            background: rgb(255, 255, 255);
+        }
+
+        .pp_area {
+            width: 100%;
+            height: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pp_area img {
+            height: 440px;
+            border-radius: 100%;
+            border: 4px solid black;
+            margin-top: 90px;
+            transition: height 0.3s ease, box-shadow 0.3s ease, border 0.2s ease;
+        }
+
+        .pp_area img:hover {
+            height: 450px;
+            border: 0px solid rgba(255, 255, 255, 0);
+            box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.52);
+        }
+
+        .txt_area {
+            width: 100%;
+            height: 8%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            transition: letter-spacing 0.3s ease, text-shadow 0.3s ease;
+        }
+        .txt_area:hover{
+            letter-spacing: 3px;
+            text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.363);
+        }
+
+        .txt_area h1 {
+            font-size: 90px;
+            font-family: 'big shoulders display';
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .txt_area h2 {
+            font-family: 'Big Shoulders Display';
+            font-weight: 300;
+            margin-left: 17px;
+            font-size: 90px;
+            text-align: center;
+        }
+
+        .name_hero2 {
+            display: flex;
+        }
+
+        .desc_area{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10%;
+            margin-top: 33px;
+        }
+
+        .desc_hero2 {
+            text-align: center;
+            width: 36%;
+            font-size: 21px;
+        }
+
+        .sosmed_hero2 {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .panel_logo_sosmed_hero2 {
+            padding: 10px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .panel_logo_sosmed_hero2:hover {
+            opacity: 0.6;
+        }
+
+        .border{
+            width: 100%;
+            height: 8%;
+            margin-top: -60px;
+            background: rgba(0, 0, 0, 0.091);
+        }
+
+        .other_project{
+            width: 100%;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a_other{
+            color: white;
+            text-align: center;
+            border: 2px solid;
+            padding: 10px;
+            margin-bottom: 80px;
+        }
+
+        .hero5{
+            height: 15vh;
+            width: 100%;
+            margin-top: 350px;
+            background: #ffffff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ul2 {
+            list-style-type: none;
+        }
+
+        .li2 {
+            display: inline;
+            margin: 15px;
+        }
+
+        .home2{
+            color: #000000;
+        }
+
+        .a2 {
+            text-decoration: none;
+            font-weight: 200;
+            color: rgb(0, 0, 0);
+            transition: color 0.2s ease;
+        }
+
+        .a2:hover{
+            color: rgba(0, 0, 0, 0.562);
+
+        }
+
+        .home2:hover {
+            color: rgba(0, 0, 0, 0.562);
+        }
+
+        .hero5 p{
+            font-weight: 200;
+        }
+
+        @media screen and (max-width:767px) {
+
+        .navbar_btn {
+            width: 100%;
+        }
+
+
+        .area_title {
+            width: 70%;
+        }
+
+        .tv_title {
+            font-size: 60px;
+        }
+
+        .tv_title_2 {
+            margin-top: -13px;
+            font-size: 48px;
+        }
+
+        .title_3 {
+            margin-top: -3px;
+            font-size: 10px;
+        }
+
+        .hero3 {
+            display: none;
+        }
+
+        .hero4 {
+            height: 40vh;
+            width: 100%;
+        }
+
+        .title_project {
+            font-size: 50px;
+            letter-spacing: -2px;
+            margin-bottom: 50px;
+        }
+
+        .panel_project {
+            width: 93%;
+        }
+
+        .container_project {
+            margin: 5px;
+        }
+
+        .project_name {
+            margin-top: 10px;
+        }
+
+        .tv_name_project {
+            font-size: 25px;
+            margin-top: -50px;
+            letter-spacing: 0px;
+            padding-left: 30px;
+        }
+
+        .hero2 {
+            height: 103vh;
+            width: 100%;
+        }
+
+        .pp_area img {
+            height: 250px;
+        }
+        .pp_area img:hover {
+            height: 255px;
+        }
+
+        .txt_area {
+            height: 8%;
+            margin-top: -40px;
+        }
+
+        .txt_area h1 {
+            font-size: 30px;
+        }
+
+        .txt_area h2 {
+            margin-left: 10px;
+            font-size: 30px;
+        }
+
+        .name_hero2 {
+            display: flex;
+        }
+
+        .desc_area{
+            margin-top: -5px;
+        }
+
+        .desc_hero2 {
+            text-align: center;
+            width: 60%;
+            font-size: 15px;
+        }
+            
+        }
     </style>
 
 </head>
 
 <body>
     <div class="navbar">
-        <div class="navbar_logo">
-            <a href="hello.html"><img class="logo" src="logo.png" width="40px" alt=""></a>
-        </div>
         <div class="navbar_btn">
             <div class="list">
                 <ul>
@@ -563,49 +775,53 @@
     <div class="hero">
         <div class="hero1_inside">
             <div class="area_title">
-            <div class="title">
-                <div class="title_2">
-                    <h1 class="tv_title">AMMAR <h1 class="tv_title_2">ZAHRAN SYAFIQ</h1>
-                    </h1>
-                </div>
-                <div class="tagline">
-                    <p class="tv_tagline">I am a student who has an interest in software development, web development
-                        and graphic design. I am a student at an IT school in Indonesia, namely IDN Boarding School and
-                        I come from Depok, Indonesia.</p>
-                    <button class="btn_me" onclick="window.location.href='hello.html'">About Me</button>
-                    <button class="btn_portofolio" onclick="window.location.href='hello.html'">Portofolio</button>
+                <div class="title">
+                    <div class="title_2">
+                        <h1 class="tv_title">AMMAR <h1 class="tv_title_2">ZAHRAN SYAFIQ</h1>
+                            <p class="title_3">SOFTWARE ENGINEER</p>
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="area_pp">
-            <div class="pp">
-                <img class="ppnya" src="IMG.jpg" alt="" width="450px">
-                <h1 class="tv_pp">HALLO!!</h1>
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="container_sosmed">
         <div class="panel_logo_sosmed">
-            <a href="https://instagram.com/ammar.zhrn/" target="_blank"><img src="instagram logo.png" height="35px" alt=""></a>
-        </div>
-        <div class="panel_logo_sosmed">
-            <a href="https://www.youtube.com/@ammaridn8682" target="_blank"><img src="yt logo.png" height="35px" alt=""></a>
-        </div>
-        <div class="panel_logo_sosmed">
-            <a href="https://www.linkedin.com/in/ammar-zahran-syafiq-ab2363233/" target="_blank"><img src="linkedin logo.png" height="35px" alt=""></a>
-        </div>
-        <div class="panel_logo_sosmed">
-            <a href="https://dribbble.com/AmmarIDN" target="_blank"><img src="dribbble 1.png" height="35px" alt=""></a>
-        </div>
-        <div class="panel_logo_sosmed">
-            <a href="https://github.com/RespawnHood" target="_blank"><img src="github.png" height="35px" alt=""></a>
+            <a href="hello.html"><img src="logo.png" height="35px" alt=""></a>
         </div>
     </div>
 
     <div class="hero2">
+        <div class="pp_area">
+            <img src="IMG.jpg" alt="">
+        </div>
+        <div class="txt_area">
+            <div class="name_hero2">
+                <h1>AMMAR <h2>ZAHRAN SYAFIQ</h2>
+                </h1>
+            </div>
+        </div>
+        <div class="desc_area">
+            <div class="desc_hero2">
+                <p>I am a student who has an interest in software development, web development and graphic design. I am
+                    a student at an IT school in Indonesia, namely IDN Boarding School and I come from Depok, Indonesia.
+                </p>
+            </div>
+        </div>
+        <div class="sosmed_hero2">
+            <a class="panel_logo_sosmed_hero2" href="https://github.com/RespawnHood" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="40px" alt=""></a>
+            <a class="panel_logo_sosmed_hero2" href="https://www.instagram.com/ammar.zhrn/" target="_blank" ><img src="https://assets.stickpng.com/images/5ecec78673e4440004f09e77.png" height="42px" alt=""></a>
+            <a class="panel_logo_sosmed_hero2" href="https://www.linkedin.com/in/ammar-zahran-syafiq-ab2363233/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" height="40px" alt=""></a>
+            <a class="panel_logo_sosmed_hero2" href="https://www.youtube.com/channel/UCLzRFxM6kJfhhKnnEZqGwAQ" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/YouTube-icon-black-png.png" height="40px" alt=""></a>
+        </div>
+    </div>
+
+    <div class="hero3">
+        <div class="border">
+
+        </div>
         <h1 class="tv_skills">MY SKILLS</h1>
         <div class="hero2_inside">
 
@@ -615,11 +831,11 @@
                         <h1 class="title_gd">GRAPHIC<br>DESIGN</h1>
                     </div>
                     <div class="div_item_skills_design">
-                        <img class="levels_dsgn" src="levels.png" alt="">
                         <div class="figma">
                             <img style="margin-left: -15px; padding-bottom: 15px;" src="Figma-logo.png" width="110px"
                                 alt="">
                             <div class="persen_figma">
+                                <p>ADVANCE</p>
                             </div>
 
                         </div>
@@ -627,6 +843,7 @@
                             <img style="margin-left: -15px; padding-bottom: 0px; margin-top: -12.3px;"
                                 src="ai_logo.webp" width="110px" alt="">
                             <div class="persen_ai">
+                                <p>ADVANCE</p>
                             </div>
                         </div>
                     </div>
@@ -644,6 +861,7 @@
                             <img style="margin-left: -10px; padding-bottom: 15px;" src="html-logo.jpeg" width="100px"
                                 alt="">
                             <div class="persen_html">
+                                <p>ADVANCE</p>
                             </div>
                         </div>
 
@@ -651,6 +869,7 @@
                             <img style="margin-left: -13px; padding-bottom: 20px; margin-top: 8px;" src="css-logo.png"
                                 width="101px" alt="">
                             <div class="persen_css">
+                                <p>ADVANCE</p>
                             </div>
                         </div>
 
@@ -658,6 +877,7 @@
                             <img style="margin-left: 3px; padding-bottom: 27px; margin-top: 17px;" src="kotlin-logo.png"
                                 width="68px" alt="">
                             <div class="persen_kotlin">
+                                <p>ADVANCE</p>
                             </div>
                         </div>
 
@@ -675,6 +895,7 @@
                             <img style="margin-left: -7px; padding-bottom: 8px; margin-top: -5px;"
                                 src="premiere-pro.png" width="95px" alt="">
                             <div class="persen_pr">
+                                <p>ADVANCE</p>
                             </div>
 
                         </div>
@@ -682,6 +903,7 @@
                             <img style="margin-left: -8px; padding-bottom: 20px; margin-top: 5px;"
                                 src="after-effect Background Removed.png" width="95px" alt="">
                             <div class="persen_ae">
+                                <p>ADVANCE</p>
                             </div>
                         </div>
                     </div>
@@ -689,91 +911,58 @@
             </div>
         </div>
     </div>
-    <div class="hero3">
+    <div class="hero4">
         <div class="gradient">
 
         </div>
-        <h1 class="title_project">WHAT HAVE I DONE</h1>
+        <h1 class="title_project">MY RECENTLY WORK</h1>
         <div class="panel_project">
             <div class="div_project">
                 <div class="container_project">
                     <div class="project">
-                        <a href=""><img class="img_project" src="Port 11.png" width="100%" alt=""></a>
+                        <a href=""><img class="img_project" src="Port 11.png" width="90%" alt=""></a>
                     </div>
                     <div class="project_name">
-                        <h3 class="tv_name_project">TOMODORO APP</h3>
+                        <h3 class="tv_name_project">TOMODORO</h3>
                     </div>
                 </div>
                 <div class="container_project">
                     <div class="project">
-                        <a href=""><img class="img_project" src="Port 7.png" width="100%" alt=""></a>
+                        <a href=""><img class="img_project" src="Port 12.png" width="90%" alt=""></a>
                     </div>
                     <div class="project_name">
-                        <h3 class="tv_name_project">CALCULATOR APP</h3>
+                        <h3 class="tv_name_project">MUSLIMWORK</h3>
                     </div>
                 </div>
                 <div class="container_project">
                     <div class="project">
-                        <a href=""><img class="img_project" src="Port 8.png" width="100%" alt=""></a>
+                        <a href=""><img class="img_project" src="Port 13.png" width="90%" alt=""></a>
                     </div>
                     <div class="project_name">
-                        <h3 class="tv_name_project">RADIO APP</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="div_project">
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="app1.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">ID CARD APP</h3>
-                    </div>
-                </div>
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="Port 9.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">TALK TO ME APP</h3>
-                    </div>
-                </div>
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="Port 10.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">FIND YOUR APP</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="div_project">
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="Port 19.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">IDN MAGZ</h3>
-                    </div>
-                </div>
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="Port 22.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">IDN MAGZ</h3>
-                    </div>
-                </div>
-                <div class="container_project">
-                    <div class="project">
-                        <a href=""><img class="img_project" src="Port 20.png" width="100%" alt=""></a>
-                    </div>
-                    <div class="project_name">
-                        <h3 class="tv_name_project">IDN CUP</h3>
+                        <h3 class="tv_name_project">CALCULATOR</h3>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="other_project">
+            <a class="a_other" href="#">Other Projects</a>
+        </div>
+    </div>
+
+    <div class="hero5">
+        <p >Copyright © 2023 Ammar Zahran. All rights reserved.</p>
+
+        <div class="contact_footer_div">
+            <div class="list">
+                <ul class="ul2">
+                    <li class="li2"><a class="home2" href="">Home</a></li>
+                    <li class="li2"><a class="a2" href="">About</a></li>
+                    <li class="li2"><a class="a2" href="">Service</a></li>
+                    <li class="li2"><a class="a2" href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
