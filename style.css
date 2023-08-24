@@ -6,6 +6,7 @@
 
 body {
     background: black;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -151,7 +152,7 @@ a:hover {
     background: white;
 }
 
-.tv_skills {
+.trigger h1{
     color: black;
     font-family: 'Big Shoulders Display';
     font-size: 130px;
@@ -161,9 +162,16 @@ a:hover {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
-.tv_skills:hover {
+.trigger h1:hover {
     letter-spacing: 8px;
+}
+
+.click-p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin-top: -70px;
+    padding-bottom: 30px;
 }
 
 .skills_div {
@@ -218,19 +226,14 @@ a:hover {
     background: beige;
 }
 
-.persen_figma {
-    background: rgba(0, 0, 0, 0.761);
+.box {
+    background: rgb(0, 0, 0);
     height: 5%;
     width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: end;
-}
-
-.persen_figma:hover {
-    height: 55.5%;
-    background: black;
+    transition: height 0.3s ease, background 0.3s ease;
 }
 
 .ai {
@@ -238,18 +241,6 @@ a:hover {
     width: 78px;
     padding: 20px;
     background: beige;
-}
-
-.persen_ai {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_ai:hover {
-    height: 33.6%;
-    background: black;
 }
 
 .hero2_inside {
@@ -272,35 +263,11 @@ a:hover {
     background: beige;
 }
 
-.persen_pr {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_pr:hover {
-    height: 33.5%;
-    background: black;
-}
-
 .ae {
     height: 87%;
     width: 78px;
     padding: 20px;
     background: beige;
-}
-
-.persen_ae {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_ae:hover {
-    height: 12%;
-    background: black;
 }
 
 .div_cd {
@@ -332,18 +299,6 @@ a:hover {
     background: beige;
 }
 
-.persen_html {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_html:hover {
-    height: 30.5%;
-    background: black;
-}
-
 .css {
     height: 87%;
     width: 78px;
@@ -351,35 +306,11 @@ a:hover {
     background: beige;
 }
 
-.persen_css {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_css:hover {
-    height: 30.5%;
-    background: black;
-}
-
 .kotlin {
     height: 87%;
     width: 78px;
     padding: 20px;
     background: beige;
-}
-
-.persen_kotlin {
-    background: rgba(0, 0, 0, 0.761);
-    height: 5%;
-    width: 80px;
-    transition: height 0.3s ease, background 0.3s ease;
-}
-
-.persen_kotlin:hover {
-    height: 31%;
-    background: black;
 }
 
 .hero4 {
@@ -437,7 +368,8 @@ a:hover {
     font-family: 'Big Shoulders Display';
     font-size: 50px;
     letter-spacing: -2px;
-    margin-top: 40px;
+    margin-top: -60px;
+    padding-bottom: 40px;
     color: rgb(0, 0, 0);
     transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, letter-spacing 0.3s ease;
 }
@@ -640,6 +572,10 @@ a:hover {
     font-weight: 200;
 }
 
+.trigger {
+    cursor: pointer;
+}
+
 @media screen and (max-width:767px) {
 
 .navbar_btn {
@@ -681,11 +617,16 @@ a:hover {
 }
 
 .panel_project {
-    width: 93%;
+    width: 96%;
+    padding-left: 0px;
 }
 
 .container_project {
     margin: 5px;
+}
+
+.div_project {
+    width: 110%;
 }
 
 .project_name {
@@ -693,8 +634,8 @@ a:hover {
 }
 
 .tv_name_project {
-    font-size: 25px;
-    margin-top: -50px;
+    font-size: 17px;
+    margin-top: -36px;
     letter-spacing: 0px;
     padding-left: 30px;
 }
