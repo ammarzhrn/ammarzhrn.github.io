@@ -26,24 +26,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     const splashContainer = document.querySelector(".splash-container");
     
-    // Check if the splash screen has been shown before
-    const hasShownSplash = localStorage.getItem("hasShownSplash");
-
-    if (!hasShownSplash) {
+    setTimeout(function() {
+        splashContainer.classList.add("hidden");
         setTimeout(function() {
-            splashContainer.classList.add("hidden");
-            setTimeout(function() {
-                splashContainer.style.display = "none";
-            }, 1000); // Delay should match the splash fade transition duration
-            localStorage.setItem("hasShownSplash", true); // Set the flag that the splash screen has been shown
-        }, 5000); // Match the delay with your animation duration
-    } else {
-        splashContainer.style.display = "none"; // Hide the splash screen immediately
-    }
+            splashContainer.style.display = "none";
+        }, 1000); 
+    }, 5000); 
     
     const animatedText = document.querySelector('.animated-text');
     const words = ['Hello', 'Hola', 'Halo', 'Bonjour', 'Privet', 'Ahlan', 'Anyoung', 'Merhaba', 'Namaste', 'God Dag'];
@@ -56,5 +47,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setInterval(changeWord, 200); 
 });
-
 
