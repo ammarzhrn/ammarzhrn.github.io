@@ -429,7 +429,7 @@ a:hover {
 
 .pp_area img {
     height: 440px;
-    border-radius: 100%;
+    border-radius: 5%;
     border: 4px solid black;
     margin-top: 90px;
     transition: height 0.3s ease, box-shadow 0.3s ease, border 0.2s ease;
@@ -574,6 +574,42 @@ a:hover {
 
 .trigger {
     cursor: pointer;
+}
+
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; 
+    opacity: 1;
+    transition: opacity 1s ease-in-out; 
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.animated-text {
+    color: black;
+    font-size: 3rem;
+    animation: changeText 0.2s infinite;
+}
+
+@keyframes changeText {
+    0%, 100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width:767px) {
