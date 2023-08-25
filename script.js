@@ -7,6 +7,8 @@ trigger.addEventListener('click', () => {
     boxes.forEach((box, index) => {
         const percentage = percentages[index];
         box.style.height = `${percentage}%`;
+        box.style.color = `white`;
+        box.style.opacity = `1`;
         box.textContent = `${percentage}%`;
     });
 
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             splashContainer.style.display = "none";
         }, 1000); 
-    }, 5000); 
+    }, 3500); 
     
     const animatedText = document.querySelector('.animated-text');
     const words = ['Hello', 'Hola', 'Halo', 'Bonjour', 'Privet', 'Ahlan', 'Anyoung', 'Merhaba', 'Namaste', 'God Dag'];
@@ -48,3 +50,12 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(changeWord, 200); 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    timelineItems.forEach(item => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("expanded");
+        });
+    });
+});

@@ -152,7 +152,7 @@ a:hover {
     background: white;
 }
 
-.trigger h1{
+.trigger h1 {
     color: black;
     font-family: 'Big Shoulders Display';
     font-size: 130px;
@@ -162,11 +162,12 @@ a:hover {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
 .trigger h1:hover {
     letter-spacing: 8px;
 }
 
-.click-p{
+.click-p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     text-align: center;
@@ -181,7 +182,7 @@ a:hover {
     justify-content: center;
 }
 
-.skills_div p{
+.skills_div p {
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -227,13 +228,16 @@ a:hover {
 }
 
 .box {
-    background: rgb(0, 0, 0);
+    background: rgb(39, 39, 39);
+    opacity: 0.5;
+    border: 2px  solid white;
     height: 5%;
     width: 80px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: end;
-    transition: height 0.3s ease, background 0.3s ease;
+    transition: height 0.3s ease, background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 .ai {
@@ -373,6 +377,7 @@ a:hover {
     color: rgb(0, 0, 0);
     transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, letter-spacing 0.3s ease;
 }
+
 .tv_name_project:hover {
     color: rgba(0, 0, 0, 0);
     -webkit-text-stroke: 2px black;
@@ -392,6 +397,13 @@ a:hover {
     height: 30%;
     width: 100%;
     background: linear-gradient(to bottom, #ffffff, rgb(255, 255, 255), #000000);
+}
+
+.gradient2 {
+    height: 5%;
+    width: 100%;
+    padding-bottom: 14px;
+    background: black;
 }
 
 .container_sosmed {
@@ -449,7 +461,8 @@ a:hover {
     margin-top: 40px;
     transition: letter-spacing 0.3s ease, text-shadow 0.3s ease;
 }
-.txt_area:hover{
+
+.txt_area:hover {
     letter-spacing: 3px;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.363);
 }
@@ -473,7 +486,7 @@ a:hover {
     display: flex;
 }
 
-.desc_area{
+.desc_area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,21 +519,22 @@ a:hover {
     opacity: 0.6;
 }
 
-.border{
+.border {
     width: 100%;
     height: 8%;
     margin-top: -60px;
     background: rgba(0, 0, 0, 0.091);
 }
 
-.other_project{
+.other_project {
     width: 100%;
     height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.a_other{
+
+.a_other {
     color: white;
     text-align: center;
     border: 2px solid;
@@ -528,7 +542,7 @@ a:hover {
     margin-bottom: 80px;
 }
 
-.hero5{
+.hero5 {
     height: 15vh;
     width: 100%;
     margin-top: 350px;
@@ -548,7 +562,7 @@ a:hover {
     margin: 15px;
 }
 
-.home2{
+.home2 {
     color: #000000;
 }
 
@@ -559,7 +573,7 @@ a:hover {
     transition: color 0.2s ease;
 }
 
-.a2:hover{
+.a2:hover {
     color: rgba(0, 0, 0, 0.562);
 
 }
@@ -568,7 +582,7 @@ a:hover {
     color: rgba(0, 0, 0, 0.562);
 }
 
-.hero5 p{
+.hero5 p {
     font-weight: 200;
 }
 
@@ -586,9 +600,9 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000; 
+    z-index: 1000;
     opacity: 1;
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 1s ease-in-out;
 }
 
 .hidden {
@@ -606,114 +620,186 @@ a:hover {
     animation: changeText 0.2s infinite;
 }
 
+.ttl-timeline{
+    font-family: 'Big Shoulders Display';
+    font-size: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+    color: white;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px 160px;
+    display: flex;
+    width: 70%;
+}
+
+.timeline-date {
+    width: 100px;
+    padding-top: 25px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.timeline-content {
+    flex-grow: 1;
+    padding: 10px;
+    border-left: 2px solid #333;
+    background: rgba(255, 255, 255, 0);
+    background-size: cover;
+    transition: background-size 0.5s ease, background 0.1s ease;
+}
+.timeline-content:hover {
+    color: black;
+    background: white;
+    background-size: 120%; /* Adjust to your needs */
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    margin: 0;
+}
+
 @keyframes changeText {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
 }
 
 @media screen and (max-width:767px) {
 
-.navbar_btn {
-    width: 100%;
-}
+    .gradient{
+        display: none;
+    }
 
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        padding:20px 110px;
+    }
 
-.area_title {
-    width: 70%;
-}
+    .timeline-date {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
 
-.tv_title {
-    font-size: 60px;
-}
+    .timeline-content {
+        border-left: none;
+    }
 
-.tv_title_2 {
-    margin-top: -13px;
-    font-size: 48px;
-}
+    .navbar_btn {
+        width: 100%;
+    }
 
-.title_3 {
-    margin-top: -3px;
-    font-size: 10px;
-}
+    .area_title {
+        width: 70%;
+    }
 
-.hero3 {
-    display: none;
-}
+    .tv_title {
+        font-size: 60px;
+    }
 
-.hero4 {
-    height: 40vh;
-    width: 100%;
-}
+    .tv_title_2 {
+        margin-top: -13px;
+        font-size: 48px;
+    }
 
-.title_project {
-    font-size: 50px;
-    letter-spacing: -2px;
-    margin-bottom: 50px;
-}
+    .title_3 {
+        margin-top: -3px;
+        font-size: 10px;
+    }
 
-.panel_project {
-    width: 96%;
-    padding-left: 0px;
-}
+    .hero3 {
+        display: none;
+    }
 
-.container_project {
-    margin: 5px;
-}
+    .hero4 {
+        height: 40vh;
+        width: 100%;
+    }
 
-.div_project {
-    width: 110%;
-}
+    .title_project {
+        font-size: 50px;
+        letter-spacing: -2px;
+        margin-bottom: 50px;
+    }
 
-.project_name {
-    margin-top: 10px;
-}
+    .panel_project {
+        width: 96%;
+        padding-left: 0px;
+    }
 
-.tv_name_project {
-    font-size: 17px;
-    margin-top: -36px;
-    letter-spacing: 0px;
-    padding-left: 30px;
-}
+    .container_project {
+        margin: 5px;
+    }
 
-.hero2 {
-    height: 103vh;
-    width: 100%;
-}
+    .div_project {
+        width: 110%;
+    }
 
-.pp_area img {
-    height: 250px;
-}
-.pp_area img:hover {
-    height: 255px;
-}
+    .project_name {
+        margin-top: 10px;
+    }
 
-.txt_area {
-    height: 8%;
-    margin-top: -40px;
-}
+    .tv_name_project {
+        font-size: 17px;
+        margin-top: -36px;
+        letter-spacing: 0px;
+        padding-left: 30px;
+    }
 
-.txt_area h1 {
-    font-size: 30px;
-}
+    .hero2 {
+        height: 103vh;
+        width: 100%;
+    }
 
-.txt_area h2 {
-    margin-left: 10px;
-    font-size: 30px;
-}
+    .pp_area img {
+        height: 250px;
+    }
 
-.name_hero2 {
-    display: flex;
-}
+    .pp_area img:hover {
+        height: 255px;
+    }
 
-.desc_area{
-    margin-top: -5px;
-}
+    .txt_area {
+        height: 8%;
+        margin-top: -40px;
+    }
 
-.desc_hero2 {
-    text-align: center;
-    width: 60%;
-    font-size: 15px;
-}
-    
+    .txt_area h1 {
+        font-size: 30px;
+    }
+
+    .txt_area h2 {
+        margin-left: 10px;
+        font-size: 30px;
+    }
+
+    .name_hero2 {
+        display: flex;
+    }
+
+    .desc_area {
+        margin-top: -5px;
+    }
+
+    .desc_hero2 {
+        text-align: center;
+        width: 60%;
+        font-size: 15px;
+    }
+
 }
