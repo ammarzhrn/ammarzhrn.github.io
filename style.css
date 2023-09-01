@@ -146,9 +146,9 @@ a:hover {
 }
 
 .hero3 {
-    height: 103vh;
+    height: 100vh;
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
     background: white;
 }
 
@@ -317,88 +317,6 @@ a:hover {
     background: beige;
 }
 
-.hero4 {
-    height: 100vh;
-    width: 100%;
-}
-
-.title_project {
-    font-family: 'Big Shoulders Display';
-    font-size: 100px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 5px;
-    color: white;
-    letter-spacing: -5px;
-    transition: letter-spacing 0.3s ease;
-}
-
-.title_project:hover {
-    letter-spacing: 6px;
-}
-
-.panel_project {
-    height: 80%;
-    width: 100%;
-    padding-left: 30px;
-}
-
-.div_project {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.container_project {
-    height: 100%;
-    width: 27%;
-    margin: 20px;
-}
-
-.project {
-    height: 75%;
-    width: 100%;
-}
-
-.project_name {
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-    margin-right: 40px;
-}
-
-.tv_name_project {
-    font-family: 'Big Shoulders Display';
-    font-size: 50px;
-    letter-spacing: -2px;
-    margin-top: -60px;
-    padding-bottom: 40px;
-    color: rgb(0, 0, 0);
-    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, letter-spacing 0.3s ease;
-}
-
-.tv_name_project:hover {
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 2px black;
-    letter-spacing: 2px;
-}
-
-.img_project {
-    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.409);
-    transition: box-shadow 0.2s ease;
-}
-
-.img_project:hover {
-    box-shadow: 0px 0px 90px rgba(255, 255, 255, 0.578);
-}
-
-.gradient {
-    height: 30%;
-    width: 100%;
-    background: linear-gradient(to bottom, #ffffff, rgb(255, 255, 255), #000000);
-}
-
 .gradient2 {
     height: 5%;
     width: 100%;
@@ -545,7 +463,6 @@ a:hover {
 .hero5 {
     height: 15vh;
     width: 100%;
-    margin-top: 350px;
     background: #ffffff;
     text-align: center;
     display: flex;
@@ -669,6 +586,241 @@ a:hover {
 .timeline-content p {
     margin: 0;
 }
+
+.hero4{
+    height: 100vh;
+    width: 100%;
+    background: white;
+}
+.title_hero4{
+    height: 20%;
+    width: 100%;
+    padding-top: 2%;
+}
+.title_hero4 h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 60px;
+    text-align: center;
+    color: #FF8329;
+}
+
+.tomodoro_div{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6%;
+}
+.tomodoro{
+    height: 90%;
+    width: 70%;
+    background: #FF8329;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc_div{
+    height: 90%;
+    width: 50%;
+    padding: 5%;
+}
+.desc_div h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    margin-top: 5%;
+}
+.desc_div h3{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+}
+.desc_div p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-top: 5%;
+    padding-right: 10%;
+}
+.screen_div{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen_div img{
+    width: 100%;
+    margin-right: 20%;
+}
+.do_item {
+    height: 25%;
+    width: 90%;
+    margin-top: 8%;
+    padding-bottom: 10%;
+}
+
+.do_item_1 {
+    height: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.item_do1 {
+    height: 95%;
+    width: 45%;
+    border: 2px solid #FF8329;
+    background: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.item_do1 img {
+    height: 65%;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.item_do1 h1 {
+    font-size: 17px;
+    margin-bottom: 4%;
+    color: #FF8329;
+}
+
+
+
+.item_do2 {
+    height: 95%;
+    width: 44%;
+    border: 2px solid #FF8329;
+    margin-left: 1.3%;
+    background: white;
+    color: #FF8329;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.item_do2 img {
+    height: 65%;
+    margin-left: 3%;
+    margin-right: 7%;
+}
+.item_do2 h1 {
+    font-size: 17px;
+    color: #FF8329;
+    margin-bottom: 4%;
+}
+
+.do_item_2 {
+    height: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin-top: 1%;
+}
+
+.item_do3 {
+    height: 95%;
+    width: 49%;
+    border: 2px solid #FF8329;
+    background: white;
+    color: #FF8329;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.item_do3 img {
+    height: 65%;
+    margin-left: 7%;
+    margin-right: 6.2%;
+}
+.item_do3 h1 {
+    font-size: 17px;
+    color: #FF8329;
+    margin-bottom: 4%;
+}
+
+.item_do4 {
+    height: 95%;
+    width: 40%;
+    margin-left: 1.3%;
+    border: 2px solid #FF8329;
+    background: white;
+    color: #FF8329;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.item_do4 img {
+    height: 65%;
+    margin-left: 3%;
+    margin-right: 7%;
+}
+
+.item_do4 h1 {
+    font-size: 17px;
+    margin-bottom: 4%;
+    color: #FF8329;
+}
+
+.item_do4 div {
+    height: 100%;
+    width: 6%;
+    background: #ff82296e;
+}
+.tomodoro_btn{
+    font-size: 20px;
+    font-weight: 900;
+    color: #FF8329;
+    background-color: white;
+    padding-right: 36.4%;
+    padding-left: 36.4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    transition: background-color 0.1s ease;
+}
+.tomodoro_btn:hover{
+    color: #ffffff;
+    background-color: #FF8329;
+}
+
+.other_prjct{
+    width: 100%;
+    height: 6%;
+    margin-top: 0.5%;
+    display: flex;
+    justify-content: center;
+}
+.other_prjct a{
+    font-size: 20px;
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #FF8329;
+    padding-right: 20.4%;
+    padding-left: 20.4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    transition: background-color 0.1s ease;
+    border-radius: 5px;
+}
+.other_prjct a:hover{
+    color: #FF8329;
+    background-color: #ffffff;
+}
+
 
 @keyframes changeText {
 
