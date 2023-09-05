@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function() {
             splashContainer.style.display = "none";
         }, 1000); 
-    }, 1500); 
+    }, 2300); 
     
     const animatedText = document.querySelector('.animated-text');
     const words = ['Hello', 'Hola', 'Halo', 'Bonjour', 'Privet', 'Ahlan', 'Anyoung', 'Merhaba', 'Namaste', 'God Dag'];

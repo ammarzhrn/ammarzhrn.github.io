@@ -954,4 +954,12 @@ a:hover {
         font-size: 15px;
     }
 
+    .hero4{
+        display: none;
+    }
+
+    .contact_footer_div {
+        display: none;
+    }
+
 }
