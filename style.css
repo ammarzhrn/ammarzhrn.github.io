@@ -7,6 +7,7 @@
 body {
     background: black;
     overflow-x: hidden;
+    user-select: none;
 }
 
 .navbar {
