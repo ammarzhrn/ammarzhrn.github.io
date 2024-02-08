@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: black;
+            user-select: none;
+        }
+
+        .hero1 {
+            height: auto;
+            width: 100vw;
+        }
+
+        .header {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 1px white;
+        }
+
+        .area-back-btn {
+            height: 200px;
+            width: 10%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 7px 15px;
+            margin-left: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .area-title {
+            height: 200px;
+            width: 90%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-main {
+            font-family: 'Big Shoulders Display';
+            font-size: 120px;
+            color: white;
+            padding-right: 170px;
+            letter-spacing: -2px;
+            transition: text-shadow 0.3s ease;
+        }
+
+        .title-main:hover {
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.476);
+        }
+
+        .title_project {
+            font-family: 'Big Shoulders Display';
+            font-size: 100px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 5px;
+            color: white;
+            letter-spacing: -5px;
+            transition: letter-spacing 0.3s ease;
+        }
+
+        .title_project:hover {
+            letter-spacing: 6px;
+        }
+
+        .panel_project {
+            height: 80%;
+            width: 90%;
+            padding-left: 103px;
+            margin-top: 50px;
+            margin-bottom: -34px;
+        }
+
+        .div_project {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container_project {
+            height: 100%;
+            width: 27%;
+            margin: 0px;
+        }
+
+        .project {
+            height: 75%;
+            width: 100%;
+        }
+
+        .project_name {
+            display: flex;
+            justify-content: center;
+            margin-top: -20px;
+            margin-right: 40px;
+        }
+
+        .tv_name_project {
+            font-family: 'Big Shoulders Display';
+            font-size: 50px;
+            letter-spacing: -2px;
+            margin-top: -60px;
+            padding-bottom: 40px;
+            color: rgb(0, 0, 0);
+            transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, letter-spacing 0.3s ease;
+        }
+
+        .tv_name_project:hover {
+            color: rgba(0, 0, 0, 0);
+            -webkit-text-stroke: 2px black;
+            letter-spacing: 2px;
+        }
+
+        .img_project {
+            box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.409);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .img_project:hover {
+            box-shadow: 0px 0px 90px rgba(255, 255, 255, 0.578);
+        }
+
+        .categories {
+            color: white;
+            text-align: center;
+            margin-top: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero1">
+        <div class="header">
+            <div class="area-back-btn">
+                <a class="back-btn" href="index.html">Back</a>
+            </div>
+            <div class="area-title">
+                <h1 class="title-main">MY WORK</h1>
+            </div>
+        </div>
+        <h2 class="categories">ANDROID APP</h2>
+        <div class="panel_project">
+            <div class="div_project">
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 11.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">TOMODORO</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 12.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">MUSLIMWORK</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 13.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">CALCULATOR</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="radionusantara.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">RADIO NUSANTARA</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel_project">
+            <div class="div_project">
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="talk to me.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">TALK TO ME</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="findmyage.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">FIND MY AGE</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="id card.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">ID CARD APP</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="margin-top: 50px;">
+        <h2 class="categories">GRAPHIC DESIGN</h2>
+        <div class="panel_project">
+            <div class="div_project">
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 11.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">TOMODORO</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 12.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">MUSLIMWORK</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 13.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">CALCULATOR</h3>
+                    </div>
+                </div>
+                <div class="container_project">
+                    <div class="project">
+                        <a href=""><img class="img_project" src="Port 13.png" width="90%" alt=""></a>
+                    </div>
+                    <div class="project_name">
+                        <h3 class="tv_name_project">CALCULATOR</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

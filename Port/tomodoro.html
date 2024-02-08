@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Tomodoro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;700;900&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", smoothScroll);
+            });
+
+            function smoothScroll(event) {
+                event.preventDefault();
+                const targetId = event.target.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+
+                // Scroll smoothly to the target section
+                targetElement.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans';
+        }
+
+        body {
+            background: #FF8329;
+            user-select: none;
+        }
+
+        .hero1 {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .title {
+            height: 20%;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .title h1 {
+            font-family: 'Plus Jakarta Sans';
+            font-size: 130px;
+            letter-spacing: -3px;
+            font-weight: 800;
+            margin-top: 20px;
+        }
+
+        .title h3 {
+            font-family: 'Plus Jakarta Sans';
+            margin-top: -10px;
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .screen1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            height: 65%;
+            margin-top: 40px;
+        }
+
+        .screen1 img {
+            height: 100%;
+        }
+
+        .team {
+            margin-left: 45px;
+            margin-bottom: -20px;
+            font-size: 17px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 300;
+            text-align: left;
+            color: white;
+        }
+
+        .final {
+            margin-right: 45px;
+            margin-bottom: -20px;
+            font-size: 17px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 300;
+            text-align: right;
+            color: white;
+        }
+
+        .hero2 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-image: url('bg1.png');
+            background-size: cover;
+        }
+
+        .main_section {
+            height: 100%;
+            width: 75%;
+        }
+
+        .screen_section {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screen_section img {
+            width: 73%;
+        }
+
+        .next_div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+        }
+
+        .next1 {
+            opacity: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .next1:hover {
+            opacity: 0.6;
+        }
+
+        .div_app_tagline {
+            height: auto;
+            width: 50%;
+            margin-top: 8.5%;
+        }
+
+        .div_app_tagline h3 {
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 700;
+            letter-spacing: -1px;
+            font-size: 43px;
+            color: #FF8329;
+        }
+
+        .div_app_tagline h1 {
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 900;
+            letter-spacing: -1px;
+            font-size: 78px;
+            color: black;
+            margin-top: -10px;
+        }
+
+        .div_under_tagline {
+            height: 17%;
+            width: 90%;
+            margin-top: 4%;
+            display: flex;
+        }
+
+        .div_reason {
+            height: 47%;
+            width: 41.5%;
+            background: #FF8329;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div_item_reason {
+            height: 100%;
+            width: 50%;
+        }
+
+        .div_reason p {
+            font-family: 'Plus Jakarta Sans';
+            color: white;
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        .item1 {
+            height: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .forget_time {
+            height: 90%;
+            width: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FF8329;
+        }
+
+        .wasting_time {
+            height: 90%;
+            width: 40%;
+            margin-left: 16px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FF8329;
+        }
+
+        .item2 {
+            height: 37.7%;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+        }
+
+        .managing_time {
+            height: 90%;
+            width: 66%;
+            margin-left: 16px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FF8329;
+        }
+
+        .whatwedo {
+            height: 16%;
+            width: 70%;
+            margin-top: 4%;
+            color: white;
+        }
+
+        .whatwedo h1 {
+            font-size: 53px;
+        }
+
+        .do_item {
+            height: 25%;
+            width: 90%;
+        }
+
+        .do_item_1 {
+            height: 42%;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .item_do1 {
+            height: 95%;
+            width: 45%;
+            border: 2px solid #FF8329;
+            background: white;
+            color: #FF8329;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .item_do1 img {
+            height: 65%;
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+
+        .item_do1 h1 {
+            font-size: 35px;
+        }
+
+        .item_do1:hover {
+            background: #FF8329;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .item_do2 {
+            height: 95%;
+            width: 44%;
+            border: 2px solid #FF8329;
+            margin-left: 1.3%;
+            background: white;
+            color: #FF8329;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .item_do2:hover {
+            background: #FF8329;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .item_do2 img {
+            height: 65%;
+            margin-left: 3%;
+            margin-right: 7%;
+        }
+
+        .item_do2 h1 {
+            font-size: 35px;
+        }
+
+        .item_do2 div {
+            height: 100%;
+            width: 6%;
+            background: #ff82296e;
+        }
+
+        .do_item_2 {
+            height: 42%;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            margin-top: 1%;
+        }
+
+        .item_do3 {
+            height: 95%;
+            width: 49%;
+            border: 2px solid #FF8329;
+            background: white;
+            color: #FF8329;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .item_do3:hover {
+            background: #FF8329;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .item_do3 img {
+            height: 65%;
+            margin-left: 7%;
+            margin-right: 6.2%;
+        }
+
+        .item_do3 h1 {
+            font-size: 35px;
+        }
+
+        .item_do4 {
+            height: 95%;
+            width: 40%;
+            margin-left: 1.3%;
+            border: 2px solid #FF8329;
+            background: white;
+            color: #FF8329;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .item_do4:hover {
+            background: #FF8329;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .item_do4 img {
+            height: 65%;
+            margin-left: 3%;
+            margin-right: 7%;
+        }
+
+        .item_do4 h1 {
+            font-size: 35px;
+        }
+
+        .item_do4 div {
+            height: 100%;
+            width: 6%;
+            background: #ff82296e;
+        }
+
+        .next_btn2 {
+            width: 47%;
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+        }
+
+        .next_btn2 a {
+            opacity: 1;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .next_btn2 a:hover {
+            opacity: 0.6;
+        }
+
+        .hero3 {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .title_hero3 {
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            margin-top: 5%;
+            padding-top: 2%;
+        }
+
+        .title_hero3 h1 {
+            font-size: 60px;
+            font-weight: 100;
+            color: white;
+        }
+
+        .title_hero3 h3 {
+            font-size: 40px;
+            font-weight: 900;
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 1px white;
+            transition: color 0.2s ease;
+        }
+
+        .title_hero3 h3:hover {
+            color: rgba(255, 255, 255, 0);
+        }
+
+        .img_hero3 {
+            width: 100%;
+            height: 73%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -1%;
+        }
+
+        .img_hero3 img {
+            height: 100%;
+            transition: height 0.3s ease;
+        }
+
+        .img_hero3 img:hover {
+            height: 101%;
+        }
+
+        .next_div3 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero4 {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .divhomepage {
+            height: 100%;
+            width: 31.5%;
+            background: #FF8329;
+        }
+
+        .divhomepage h1 {
+            font-size: 35px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 13%;
+            margin-bottom: 12%;
+        }
+
+        .divhomepage img {
+            width: 65%;
+            margin-left: 17%;
+        }
+
+        .divtimer {
+            height: 100%;
+            width: 37%;
+            background: white;
+        }
+
+        .divtimer h1 {
+            font-size: 35px;
+            text-align: center;
+            color: #FF8329;
+            margin-top: 13%;
+            margin-bottom: 15%;
+        }
+
+        .divtimer img {
+            width: 80%;
+            margin-left: 12%;
+        }
+        .divtimer div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15%;
+        }
+        .divtimer a {
+            color: #FF8329;
+            text-align: center;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .divtimer a:hover{
+            opacity: 0.5;
+        }
+
+        .divarticle {
+            height: 100%;
+            width: 31.5%;
+            background: #FF8329;
+        }
+
+        .divarticle h1 {
+            font-size: 35px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 13%;
+            margin-bottom: 12%;
+        }
+
+        .divarticle img {
+            width: 65%;
+            margin-left: 18%;
+        }
+
+        .hero5{
+            height: 100vh;
+            width: 100%;
+            background: white;
+            text-align: center;
+        }
+        .hero5 h1{
+            font-size: 100px;
+            color: #FF8329;
+            padding-top: 22%;
+        }
+        .hero5 button{
+            font-size: 13px;
+            text-decoration: none;
+            border: none;
+            color: white;
+            background-color: #FF8329;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-radius: 5px;
+            transition: color 0.2s ease, border 0.2s ease, background-color 0.2s ease;
+        }
+        .hero5 button:hover{
+            color: #FF8329;
+            background-color: #ffffff;
+        }
+        .hero5 h3{
+            color: #FF8329;
+            font-size: 20px;
+            font-weight: 100;
+            padding-top: 22%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="section1">
+        <div class="hero1">
+            <div class="title">
+                <h1>TOMODORO</h1>
+                <h3>Mobile App</h3>
+            </div>
+            <div class="screen1">
+                <div class="team">
+                    <h4>Team</h4>
+                    <p>Pendekar Software</p>
+                </div>
+                <img src="screen1.png" alt="">
+                <div class="final">
+                    <h4>Android</h4>
+                    <p>Final Project</p>
+                </div>
+            </div>
+            <div class="next_div">
+                <a class="next1" href="#section2">NEXT</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="hero2">
+            <div class="screen_section">
+                <img src="tomodoro-screen2.png" alt="">
+            </div>
+            <div class="main_section">
+                <div class="div_app_tagline">
+                    <h3>Tomodoro is the</h3>
+                    <h1>Solution!</h1>
+                </div>
+                <div class="div_under_tagline">
+                    <div class="div_reason">
+                        <p>for those of you who have difficulty managing time when doing a job</p>
+                    </div>
+                    <div class="div_item_reason">
+                        <div class="item1">
+                            <div class="forget_time">
+                                <h2>Forgetting The Time</h2>
+                            </div>
+                            <div class="wasting_time">
+                                <h2>Wasting Time</h2>
+                            </div>
+                        </div>
+                        <div class="item2">
+                            <div class="managing_time">
+                                <h2>Difficult to managing time</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="whatwedo">
+                    <h1>What are we creating to solve all these problems?</h1>
+                </div>
+
+                <div class="do_item">
+                    <div class="do_item_1">
+                        <div class="item_do1">
+                            <img src="timer_logo.png" alt="">
+                            <h1>Pomodoro Timer</h1>
+                        </div>
+                        <div class="item_do2">
+                            <div></div>
+                            <img src="daily_logo.png" alt="">
+                            <h1>Daily Reminders</h1>
+                        </div>
+                    </div>
+                    <div class="do_item_2">
+                        <div class="item_do3">
+                            <img src="article_logo.png" alt="">
+                            <h1>Productivity Article</h1>
+                        </div>
+                        <div class="item_do4">
+                            <div></div>
+                            <img src="ui_logo.png" alt="">
+                            <h1>Interactive UI</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="next_btn2">
+                    <a href="#section3">NEXT</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="section3">
+        <div class="hero3">
+            <div class="title_hero3">
+                <h1>What's in our app?</h1>
+                <h3>Tomodoro App</h3>
+            </div>
+            <div class="img_hero3">
+                <img src="screen3.png" alt="">
+            </div>
+            <div class="next_div3">
+                <a class="next1" href="#section4">NEXT</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4">
+        <div class="hero4">
+            <div class="divhomepage">
+                <h1>The Homepage</h1>
+                <img src="thehomepage.png" alt="">
+            </div>
+            <div class="divtimer">
+                <h1>The Timer's</h1>
+                <img src="thetimers.png" alt="">
+                <div>
+                    <a href="#section5">NEXT</a>
+                </div>
+            </div>
+            <div class="divarticle">
+                <h1>The Article's</h1>
+                <img src="thearticle.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="section5">
+        <div class="hero5">
+            <h1>Thank You!</h1>
+            <button onclick="location.href='index.html'">Back</button>
+            <h3>Copyright © 2023 - Pendekar Software </h3>
+        </div>
+    </section>
+</body>
+
+</html>
