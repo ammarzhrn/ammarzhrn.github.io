@@ -38,10 +38,7 @@
             <h1 class="text-sm font-light max-md:hidden">Help</h1>
         </div>
         <div class="flex justify-end items-center space-x-4">
-            <div class="flex justify-center items-center space-x-1 max-md:hidden">
-                <h1 class="text-sm font-semibold">90%</h1>
-                <img class="w-7" src="batt.png" alt="">
-            </div>
+            <img class="w-7" src="batt.png" alt="">
             <img class="w-6 max-md:hidden" src="a_icon.png" alt="">
             <img class="w-6 max-md:hidden" src="key_icon.png" alt="">
             <img class="w-5 max-md:hidden" src="wifi_icon.png" alt="">
@@ -52,7 +49,7 @@
             <div id="clock" class="text-sm font-light"></div>
         </div>
     </div>
-    <div class="w-full h-full border rounded-2xl border-neutral-600 flex justify-center items-center mt-10">
+    <div class="w-full h-full border rounded-2xl border-neutral-600 flex justify-center items-center mt-5">
         <div class="w-1/5 h-full backdrop-blur-2xl rounded-l-2xl border-r border-black flex flex-col justify-start items-center">
             <div class="w-full p-7 flex justify-start items-center space-x-2 max-md:justify-center max-md:p-0 max-md:pt-4">
                 <a href="index.html" class="size-4 rounded-full bg-red-500 flex justify-center items-center group">
@@ -92,7 +89,7 @@
                 <a class="mb-40" href="https://www.linkedin.com/in/ammar-zahran-syafiq-ab2363233/" target="_blank">
                     <img class="w-28" src="linkedin_icon.png" alt="">
                 </a>
-                <a class="mb-44" href="https://www.linkedin.com/in/ammar-zahran-syafiq-ab2363233/" target="_blank">
+                <a class="mb-44" href="https://www.github.com/ammarzhrn" target="_blank">
                     <img class="w-28" src="github_icon.png" alt="">
                 </a>
                 <a class="mb-44" href="https://www.linkedin.com/in/ammar-zahran-syafiq-ab2363233/" target="_blank">
@@ -104,6 +101,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript untuk memperbarui waktu dan tanggal
+        function updateClockAndDate() {
+            const clockElement = document.getElementById('clock');
+            const dateElement = document.getElementById('date');
+            const now = new Date();
+            
+            // Update clock
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}`;
+            
+            // Update date
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const dayName = days[now.getDay()];
+            const day = String(now.getDate()).padStart(2, '0');
+            const monthName = months[now.getMonth()];
+            dateElement.textContent = `${dayName}, ${day} ${monthName}`;
+        }
+
+        // Memperbarui waktu dan tanggal setiap detik
+        setInterval(updateClockAndDate, 1000);
+
+        // Memanggil fungsi untuk pertama kalinya agar tidak ada delay
+        updateClockAndDate();
+    </script>
 </body>
 
 </html>

@@ -39,7 +39,7 @@
         .modal {
             opacity: 0;
             transform: translateY(-1%);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.15s ease, transform 0.15s ease;
         }
         .modal.show {
             opacity: 1;
@@ -134,7 +134,7 @@
             setTimeout(function() {
                 const modal = document.querySelector('.modal');
                 modal.classList.add('show');
-            }, 100); // Jeda 1 detik sebelum modal muncul
+            }, 100); // Jeda 0,1 detik sebelum modal muncul
         };
 
         // Event listener untuk menutup modal
