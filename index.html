@@ -22,11 +22,79 @@
         .font-family2 {
             font-family: 'IBM Plex Mono', 'monoscape';
         }
+
+        .no-decoration {
+            border: none;
+            background: transparent;
+            resize: none;
+            outline: none;
+            box-shadow: none;
+        }
+        .no-decoration:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .modal {
+            opacity: 0;
+            transform: translateY(-1%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .modal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
-<body class="w-full h-screen bg-[url('https://images.hdqwalls.com/download/macbook-m3-stock-pa-3840x2400.jpg')] bg-cover bg flex justify-end items-center flex-col text-white overflow-hidden font-family2 select-none">
-    <div class="p-2 px-3 border border-stone-700 bg-zinc-900 rounded-3xl my-2 flex flex-row justify-center items-center space-x-4 opacity-0 translate-y-20 hover:opacity-100 hover:translate-y-1 duration-200 max-md:opacity-100 max-md:translate-y-1">
+<body class="w-full h-screen bg-[url('https://images.hdqwalls.com/download/macbook-m3-stock-pa-3840x2400.jpg')] bg-cover bg flex justify-end items-center flex-col text-white overflow-hidden font-family select-none">
+    <div id="myModal" class="fixed right-40 bottom-96 max-md:right-9 max-md:w-80 w-96 h-80 bg-neutral-800 rounded-2xl border border-stone-700 flex flex-col justify-start items-center modal">
+        <div class="w-full flex justify-start items-center">
+            <div class=" p-5 flex justify-start items-center space-x-2">
+                <btn id="closeModal" href="index.html" class="size-4 rounded-full bg-red-500 flex justify-center items-center group">
+                    <img class="size-3 invisible group-hover:visible" src="cancel_icon.png" alt="">
+                </btn>
+                <div class="size-4 rounded-full bg-yellow-500"></div>
+                <div class="size-4 rounded-full bg-green-500"></div>
+            </div>
+            <div class=" py-4 flex justify-start items-center max-md:justify-center space-x-4">
+                <h1 class="font-bold">Note</h1>
+                <img class="w-6" src="font_icon.png" alt="">
+                <img class="w-6" src="check_icon.png" alt="">
+                <img class="w-6" src="table_icon.png" alt="">
+                <img class="w-6" src="more_icon.png" alt="">
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-col justify-start items-center py-1 px-4 space-y-2">
+            <h1 class="text-xs text-neutral-500">5 June 2024 at 11.34</h1>
+            <textarea class="no-decoration bg-transparent text-xl text-white w-full h-full border-none decoration-transparent">Open finder to see my projects!! ~Ammar Zahran</textarea>
+        </div>
+    </div>
+    <div class="w-full py-3 px-6 bg-black absolute top-0 flex justify-between items-center">
+        <div class="flex justify-start items-center space-x-4">
+            <img class="w-4" src="https://pngimg.com/d/apple_logo_PNG19680.png" alt="">
+            <h1 class="text-sm font-bold">Finder</h1>
+            <h1 class="text-sm font-light max-md:hidden">File</h1>
+            <h1 class="text-sm font-light max-md:hidden">Edit</h1>
+            <h1 class="text-sm font-light max-md:hidden">View</h1>
+            <h1 class="text-sm font-light max-md:hidden">Go</h1>
+            <h1 class="text-sm font-light max-md:hidden">Window</h1>
+            <h1 class="text-sm font-light max-md:hidden">Help</h1>
+        </div>
+        <div class="flex justify-end items-center space-x-4">
+            <img class="w-7" src="batt.png" alt="">
+            <img class="w-6 max-md:hidden" src="a_icon.png" alt="">
+            <img class="w-6 max-md:hidden" src="key_icon.png" alt="">
+            <img class="w-5 max-md:hidden" src="wifi_icon.png" alt="">
+            <img class="w-4 max-md:hidden" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--W18wy6a2ieVL6AoUwTx7OwzuY1-ncqVeA&s" alt="">
+            <img class="w-4 max-md:hidden" src="cc_icon.png" alt="">
+            <img class="w-4 max-md:hidden" src="siri_icon.png" alt="">
+            <div id="date" class="text-sm font-light"></div>
+            <div id="clock" class="text-sm font-light"></div>
+        </div>
+    </div>
+    <div class="p-2 px-3 border border-stone-700 bg-zinc-900 rounded-3xl my-2 flex flex-row justify-center items-center space-x-4 ">
         <a class="group" href="menu.html">
             <img src="finder_hover.png" class="group-hover:visible h-10 absolute bottom-28 invisible" alt="">
             <img src="finder_icon.png" class="h-20" alt="">
@@ -34,6 +102,47 @@
         <img src="photo_icon.png" class="h-20" alt="">
         <img src="trash_icon.png" class="h-20" alt="">
     </div>
+
+    <script>
+        // JavaScript untuk memperbarui waktu dan tanggal
+        function updateClockAndDate() {
+            const clockElement = document.getElementById('clock');
+            const dateElement = document.getElementById('date');
+            const now = new Date();
+            
+            // Update clock
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}`;
+            
+            // Update date
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const dayName = days[now.getDay()];
+            const day = String(now.getDate()).padStart(2, '0');
+            const monthName = months[now.getMonth()];
+            dateElement.textContent = `${dayName}, ${day} ${monthName}`;
+        }
+
+        // Memperbarui waktu dan tanggal setiap detik
+        setInterval(updateClockAndDate, 1000);
+
+        // Memanggil fungsi untuk pertama kalinya agar tidak ada delay
+        updateClockAndDate();
+
+        window.onload = function() {
+            setTimeout(function() {
+                const modal = document.querySelector('.modal');
+                modal.classList.add('show');
+            }, 100); // Jeda 1 detik sebelum modal muncul
+        };
+
+        // Event listener untuk menutup modal
+        document.getElementById('closeModal').onclick = function() {
+            const modal = document.querySelector('.modal');
+            modal.classList.remove('show');
+        };
+    </script>
 </body>
 
 </html>
